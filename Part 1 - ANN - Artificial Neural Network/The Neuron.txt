@@ -1,0 +1,19 @@
+The Neuron:
+
+A single neuron is made up of Dendrites, Neuron, and Axon
+Synapses --> Receptor
+
+In machines, Input Values / Independent Variables (Synapses) are passed to the Node (Neuron) 
+and an Output Value is created (Axon)
+    EX:
+    IN --> Calculation --> OUT
+
+Input Values must be Standardized, all of the same type or definition
+Output Values can be Continuous (Price), Binary (Yes / No), or Categorical
+The Input and Output values are considered a Single Observation and are also the same observation
+
+Input Values are given Weights, which are how the neural network learns, it will adjust the weights to determine 
+which is needs to be gradually changed to achieve the desired output
+
+The Node takes in the Input Values and Weights into an Active Function (Learning Method) to get a desired Output Value,
+if the output is desired it is then passed to the next Node for further calculations
