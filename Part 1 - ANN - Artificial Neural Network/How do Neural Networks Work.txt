@@ -1,0 +1,11 @@
+How do Neural Networks Work?
+
+Neural Networks work by using sets of standardized data is used as input values in the Input Layer, which is then passed to the 
+Hidden Layer with weights that determine how much they affect the output value in the Output Layer
+
+Input vales in the Input layer are given weights to be processed to the Output value in the Output layer    
+    EX: w1*x1 + w2*x2 + w3*x3 + w4*x4 = Price
+    - Weights multipled by input to get an output (Above does not include Hidden Layer)
+
+Weights affect input values by making some more or less relevant in the Hidden Layer, adjusting how they affect the output value
+With weight, some values can become entirely irrelevant to the output value
