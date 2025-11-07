@@ -1,0 +1,16 @@
+ReLu Layer
+
+The Rectified Linear Unit (ReLu) Layer is a type of activation function that introduces the property of nonlinearity to the neural network,
+it helps the model to solve complex problems and find intricate patterns in the input data. Nonlinearity is the property of a function or data
+that cannot be graphed on a straight line, whose ouptputs are not directly proportional to their inputs.
+
+The ReLu function is defined as:
+    f(x) = max(0, x)
+
+or in simpler terms:
+    if input > 0:
+        return input
+    else:
+        return 0
+
+ReLu is most commonly used for computer vision and speech recognition.
