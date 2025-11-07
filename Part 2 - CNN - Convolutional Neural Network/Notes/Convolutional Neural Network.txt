@@ -1,0 +1,26 @@
+Convolutional Neural Network
+
+A Convolutional Neural Network (CNN) is another version of ANN, it is primarily designed to extract features from
+grid-like matrix datasets, or a 2D array of data arranged in rows and columns with indices.
+
+This is useful for visual datasets such as images or videos, where data patterns play a crucial role.
+
+CNNs are widely used for computer vision apps, due to their effectiveness in processing visual data.
+CNNs consist of multiple layers, including the input layer, Convolutional layer, max pooling layer, 
+flattening layer, fully connected layer, and output layer
+EX:
+    Input Layer --> Convolutional Layer --> Max Pooling Layer --> Flattening --> Fully Connected Layer --> Output Layer
+
+Advantages of CNNs:
+
+    - Good at detecting patterns and features in images, videos, and audio signals.
+    - Robust to translation, rotation, and scaling invariance.
+    - End-to-end training, no need for manual feature extraction.
+    - Can handle large amounts of data and achieve high accuracy.
+
+Disadvantages of CNNs:
+
+    - Computationally expensive to train and require a lot of memory.
+    - Can be prone to overfitting if not enough data or proper regularization is used.
+    - Requires large amounts of labeled data.
+    - Interpretability is limited, it's hard to understand what the network has learned.
