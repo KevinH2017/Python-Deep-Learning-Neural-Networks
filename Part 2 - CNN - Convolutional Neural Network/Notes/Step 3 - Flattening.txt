@@ -1,0 +1,12 @@
+Flattening
+
+This step takes the pooled feature map and flattens it into a column.
+After this step, you end up with a long vector of input data that you then pass through the neural network
+for further processing.
+
+So far, each of the steps are designed to extract and condense the important features from the input image.
+
+Step 1: Input Image (Starting Point)
+Step 2: Convolution Layer (Convolution Operation)
+Step 3: Pooling Layer (Pooling)
+Step 4: Input layer for the artificial neural network (Flattening)
