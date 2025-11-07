@@ -1,0 +1,14 @@
+Convolution Layer
+
+Convolution is an equation where two sources of information are intertwined to create a third source of information.
+This is typically used in image processing to blur and sharpen images, as well as enhancing edges and 
+embossing (creating raised images, creating a 3D effect).
+
+Convolution is used to take an Input Image and applies a Feature Detector to create an output Feature Map.
+The Feature Detector is a small matrix (3x3, 5x5, etc.) that is slid over the Input Image to perform element-wise
+multiplication and summation. This allows the Feature Detector to find specific features in the Input Image, such as edges,
+corners, and textures.
+
+The output Feature Map is a transformed version of the Input Image that highlights the detected features. This process
+is repeated for multiple Feature Detectors to create a rich representation of the Input Image, which can be used for
+further processing or classification tasks.
