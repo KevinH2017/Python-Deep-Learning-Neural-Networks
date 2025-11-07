@@ -1,0 +1,5 @@
+Max Pooling
+
+Max Pooling selects the maximum element from the region of the feature map covered by the filter, then the output
+after the max-pooling layer would be a feature map containing the msot prominent features of the previous feature map.
+Max pooling preserves the most important features (edges, textures, etc.) and provides better performance in most cases.
