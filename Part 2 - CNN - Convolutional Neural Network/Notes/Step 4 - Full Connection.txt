@@ -1,0 +1,14 @@
+Full Connection, Fully Connected Layer
+
+Flattening --> [Input Layer, Fully Connected Layer, Output Layer] --> Output Value
+
+The Fully Connected Layer (also known as the Dense Layer) is a layer in a neural network where each neuron is connected 
+to every neuron in the previous layer. This layer is typically used at the end of a Convolutional Neural Network (CNN) 
+to combine the features extracted by the convolutional and pooling layers and make predictions based on those features.
+
+Each error that is made in the output value is then backpropagated through the network to update the weights
+and biases of the neurons in the fully connected layer, as well as the filters in the convolutional and pooling layers.
+Which improves the accuracy of the model over time.
+
+This loop of forward propagation (making predictions) and backpropagation (updating weights and biases) can continue for
+many iterations until the model reaches a satisfactory level of accuracy.
