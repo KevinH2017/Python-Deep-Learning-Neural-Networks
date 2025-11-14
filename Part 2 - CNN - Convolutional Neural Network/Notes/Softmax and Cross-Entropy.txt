@@ -1,0 +1,19 @@
+Softmax and Cross-Entropy
+
+The Softmax function is used in the output layer of a neural network to help classify inputs into desired categories.
+It takes in raw input and then transforms them into probabilities that sum to 1, the closer it is to 1, the more
+confident the model is about that class.
+
+The formula for the Softmax function is as follows:
+
+    softmax(z_i) = exp(z_i) / Σ exp(z_j) for j = 1 to K
+
+Where:
+- z_i is the input score for class i
+- K is the total number of classes
+- exp is the exponential function
+- Σ denotes the summation over all classes
+
+Cross-Entropy is a loss function commonly used in classification problems. It measures the difference between two probabilities,
+the true distribution (actual labels) and the predicted distribution (output from the model). Cross-Entropy helps to tell the
+neural network how well it is performing and makes changes to improve its accuracy.
