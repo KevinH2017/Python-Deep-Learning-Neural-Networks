@@ -1,0 +1,44 @@
+Initializing the ANN
+
+You must set initial weights and biases for the neural network
+Such as using random seeds (np.random.seed(42)) or keras initialization (ann = tf.keras.models.Sequential())
+
+Step 1:
+
+Adding the input layer and the first hidden layer
+Dense(units, activation) - 
+    units: number of neurons in the layer
+    activation: this is the mathematical equation used to get the output of a Node
+
+    relu function example in pseudo code:
+        if input > 0:
+            return input
+        else:
+            return 0
+
+    Python Code:
+        ann.add(tf.keras.layers.Dense(units=6, activation='relu'))
+
+
+Step 2:
+
+Adding the second hidden layer
+    Same as step 1
+
+    Python Code:
+        ann.add(tf.keras.layers.Dense(units=6, activation='relu'))
+
+
+Step 3:
+
+Adding the output layer
+One unit because it's a binary classification problem (0 or 1)
+Sigmoid activation function because it will give a value between 0 and 1
+
+    sigmoid function example in pseudo code:
+        import numpy as np 
+        def sig(x):
+            return 1/(1 + np.exp(-x))
+
+    Python Code:
+        ann.add(tf.keras.layers.Dense(units=1, activation='sigmoid'))
