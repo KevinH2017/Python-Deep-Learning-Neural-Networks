@@ -1,0 +1,14 @@
+Recurrent Neural Networks
+
+Used for time series analysis, a way of analyzing a sequence of data points collected over a period of time.
+RNN have short term memory. 
+
+The Vanishing Gradient Problem:
+
+Is the problem of greatly diverging gradient magnitudes between earlier and later layers
+encountered when training neural networks with backpropagation.
+As the nuumber of forward propagation steps in a network increases, the gradients of earlier weights are calculated with
+increasingly many multiplications which can cause them to shrink the gradient magnitude leading to be exponentially smaller
+than later gradients. As a result, this will cause instability in training the network, slow it, or halt it completely.
+
+The opposite of this problem is called the Exploding Gradient Problem, where weight gradients at earlier stages get exponentially larger.
