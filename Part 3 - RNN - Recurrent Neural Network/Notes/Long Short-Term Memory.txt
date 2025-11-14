@@ -1,0 +1,22 @@
+Long Short-Term memory (LSTM)
+
+LSTMs are a type of RNN that helps mitigate the vanishing gradient problem.
+LSTMs can capture long-term dependencies in sequential data making them ideal for tasks like language translation,
+speech recognition, and time series forecasting.
+
+An LSTM unit is composed of a cell and three gates; an input gate, output gate, and a forget gate.
+With these gates, an LSTM is able to selectively retain or discard information as it flows through the network,
+allowing them to learn long-term dependencies. This works like short term memory, allowing it to update using the
+current input, and the previous hiddent state and the current state of the memory cell.
+
+Any information that is no longer useful in the cell state is removed with the forget gate.
+Two inputs are fed to the gate and multiplied with weights and biases, which is then passed to a sigmoid function to
+give it a range of [0,1] to determine if it should keep the information or discard it.
+If the output is 0 or near 0, it is discarded. If the output is 1 or near 1, it is retained.
+
+The addition of useful information to the cell state is done by the input gate.
+Information is passed through the sigmoid function and filter values are used similar to the forget gate.
+After that, the regulated values are multipled to obtain the useful information.
+
+The output gate is used to decide what part of the current cell state should be sent as the output for this step.
+With a sigmoid function, it determines what information from the cell state will be passed along as output.
