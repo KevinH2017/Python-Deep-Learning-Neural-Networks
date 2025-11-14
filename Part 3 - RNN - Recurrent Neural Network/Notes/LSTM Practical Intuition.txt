@@ -1,0 +1,9 @@
+Long Short-Term Memory (LSTM) Practical Intuition
+
+LSTM is a neural network that allows information to persist.
+By incorporating feedback connections, allowing it to process entire sequences of data, not just individual points.
+LSTM can then learn patterns in text and speech, and improve itself over time.
+
+Like learning how to get a website from a bunch of text by looking for patterns of www. and .com
+When a quote starts and ends.
+When a portion of code is part of a for-loop and what part of a line is the if-condition.
