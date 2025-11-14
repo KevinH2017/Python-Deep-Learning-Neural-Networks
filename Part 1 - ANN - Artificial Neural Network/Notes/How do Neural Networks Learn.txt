@@ -1,3 +1,11 @@
 How do Neural Networks Learn?
 
-Neural Networks learn by
+Neural Networks learn by taking in input and comparing it to the expected output
+
+If the output is incorrect, the network adjusts its internal parameters (weights and biases) to reduce the error
+
+This occurs over many iterations, with the network gradually refining its parameters to minimize the difference between its 
+predictions and the actual outcomes
+
+This is called backpropagation, where the error is propagated back through the network to update the weights
+
