@@ -1,0 +1,15 @@
+How to Use Stochastic Gradient Descent:
+
+Stochastic Gradient Descent is an optimization algorithm used to train neural networks and MLMs by adjusting weights
+for each individual Node / Neuron instead of running them all at once, this is faster and more efficient
+
+Training the ANN with Stochastic Gradient Descent:
+
+1. Initialize weights and biases randomly for all neurons in the network
+2. Input the first observation from the training dataset into the network, each feature in one input Node
+3. Forward-propagate the input through the network to generate a predicted output, from left to right
+4. Compare the predicted result to the actual result, measure the error
+5. Backpropagate the error from right to left, updating weights according to how much they are responsible for the error,
+   the learning rate decides how much to adjust the weights
+6. Repeat steps 1 to 5 and update weights after each observation, or update weights only after a batch of observations
+7. When all observations have been used, this is one epoch, repeat for many epochs until the error is minimized
