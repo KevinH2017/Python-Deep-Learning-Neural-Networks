@@ -1,0 +1,10 @@
+Gradient Descent:
+
+Gradient Descent is an optimization algorithm which is used to train neural networks and machine learning models 
+by minimizing errors between predicted and actual results
+
+Curse of Dimensionality:
+
+The Curse of Dimensionality is the challenges and complications that can occur when analyzing and organizing data in
+high-dimensional spaces (the features or variables in a dataset), this leads to large computational costs and impossible
+amounts of data needed to make accurate predictions
