@@ -2,6 +2,8 @@ import tensorflow as tf
 import numpy as np
 from keras.layers import Rescaling, RandomFlip, RandomZoom, RandomRotation, Conv2D, MaxPooling2D, Flatten, Dense
 from keras.utils import image_dataset_from_directory, load_img, img_to_array
+import os
+dirname = os.path.dirname(__file__)
 
 tf.__version__
 
@@ -15,7 +17,7 @@ image_size is set to (64, 64) to resize images to 64x64 pixels
 shuffle is set to True to shuffle the data
 '''
 train_image_gen = image_dataset_from_directory(
-    directory="Part 2 - CNN - Convolutional Neural Network\\example_datasets\\training_set",
+    directory=dirname+"\\example_datasets\\training_set",
     labels='inferred',
     label_mode='binary',
     batch_size=32,
@@ -27,7 +29,7 @@ print("Training dataset imported successfully!")
 class_names = train_image_gen.class_names
 
 test_image_gen = image_dataset_from_directory(
-    directory="Part 2 - CNN - Convolutional Neural Network\\example_datasets\\test_set",
+    directory=dirname+"\\example_datasets\\test_set",
     labels='inferred',
     label_mode='binary',
     batch_size=32,
@@ -116,7 +118,7 @@ print("CNN training completed successfully!")
 
 # Single image prediction
 # target_size is set to (64, 64) to match the input size of the CNN
-test_image = load_img(path="Part 2 - CNN - Convolutional Neural Network\\example_datasets\\single_prediction\\cat_or_dog_3.jpg", target_size=(64, 64))
+test_image = load_img(path=dirname+"\\example_datasets\\single_prediction\\cat_or_dog_4.jpg", target_size=(64, 64))
 
 # Convert image to array
 test_image = img_to_array(test_image)
