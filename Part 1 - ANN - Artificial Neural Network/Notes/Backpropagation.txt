@@ -1,0 +1,8 @@
+Backpropagation:
+
+Backpropagation is an algorithm used to train neural networks by adjusting all the weights in the network
+at once based on the error rate obtained in the previous iteration
+
+This helps to minimize the error rate and improve the accuracy of the model
+
+Forward Propagation is the initial phase where inputs are passed through the network to generate an output
