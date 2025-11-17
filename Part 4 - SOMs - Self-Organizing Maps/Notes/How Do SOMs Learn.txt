@@ -1,0 +1,20 @@
+How Do SOMs Learn?
+
+Self-Organizing Maps learn by finding different parts of the network to respond similarly based on certain input patterns.
+Each node is calculated with its weights to determine which is the closest to desired value (0), called the "Best Matching Unit" (BMU)
+for a given row of the network.
+The nodes in a radius around the BMU have their weights adjusted to get closer to the BMU, the closer the node, the stronger it is pulled
+to the BMU
+The next row goes through the same process, the separate BMUs wll have their nearby nodes be pulled based on how close they are to them.
+This separates the individuals nodes into clusters around the BMUs.
+
+Over each iteration, the map will slowly adjust its BMUs into smaller and smaller organized networks so every node is assigned to a nearby BMU.
+This is considered the "competition" where BMUs will fight for control over nodes
+
+Note:
+    - SOMs retain topology of the input set
+    - SOMs reveal correlations that are not easily identified
+    - SOMs classify data without supervision
+    - No target vector, no backpropagation
+    - No lateral connections between output nodes
+    
