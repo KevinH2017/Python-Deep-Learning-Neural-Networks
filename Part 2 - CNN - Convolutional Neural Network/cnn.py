@@ -8,7 +8,7 @@ dirname = os.path.dirname(__file__)
 tf.__version__
 
 '''
-Load dataset from directory:
+Import dataset from directory:
 
 labels are inferred from the directory structure
 label_mode is set to 'binary' for binary classification
