@@ -1,0 +1,21 @@
+Self-Organizing Maps (SOMs)
+
+Self-Organizing Maps take in input layers with their weights to create a 2D output of neurons in a lattice shape.
+Mainly used for feature detection.
+This reduces the number of columns in ANN, CNN, and RNN types of neural networks.
+
+It automatically places output neurons together that share properties in the training datasets, this is done without being
+told how the datasets can be grouped together.
+This is called "unsupervised learning algorithm".
+
+The style of how the network is trained is "competitive learning", in which nodes compete for the right to respond to a subset
+of input data.
+
+The basic principles of competitive learning:
+    - A set of neurons that are all the same except for some randomly distributed synpatic weights, and which therefore respond
+    differently to a given set of input patterns.
+
+    - A limit is imposed on the weights of each neurons.
+    
+    - An algorithm that the neruson use to compete for the right to respond to a given subset of inputs, such that only one output
+    neuron (or only one neuron per group) is active ("on") at a time. The neuron that wins is called a "winner-take-all" neuron.
