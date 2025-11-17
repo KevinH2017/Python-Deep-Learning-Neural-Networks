@@ -7,7 +7,7 @@ from keras.layers import Dense, LSTM, Dropout
 import os
 dirname = os.path.dirname(__file__)
 
-# Read training dataset
+# Import training dataset
 dataset_train = pd.read_csv(dirname+"\\example_datasets\\Google_Stock_Price_Train.csv")
 training_set = dataset_train.iloc[:, 1:2].values
 
@@ -77,7 +77,7 @@ print("RNN compiling completed succesfully!")
 regressor.fit(x_train, y_train, epochs=100, batch_size=32)
 print("RNN training completed succesfully!")
 
-# Read test dataset
+# Import test dataset
 dataset_test = pd.read_csv(dirname+"\\example_datasets\\Google_Stock_Price_Test.csv")
 # Real stock price of 2017
 real_stock_price = dataset_test.iloc[:, 1:2].values
