@@ -1,0 +1,17 @@
+Random Initialization Trap
+
+Random initialization trap is a problem that occurs in the K-means algorithm. This occurs when the centroids of the
+clusters to be generated are explicitly defined by the user, causing inconsistency that can lead to to generating
+wrong clusters in the dataset, preventing the network from creating the correct clusters.
+
+The right number of clusters depends on the size of the dataset.
+Use the Elbow Method by plotting the sum of squares against increasing k values to find the point where the imporvement
+slows down, the elbow.
+The best number of clusters is the tip of the elbow, when improvement slows dramatically.
+
+Note:
+    Before the elbow: 
+        WCSS drops quickly --> clusters become much better.
+        
+    After the elbow: 
+        WCSS drops slowly --> extra clusters add little value and may lead to overfitting.
