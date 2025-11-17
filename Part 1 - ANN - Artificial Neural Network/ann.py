@@ -9,7 +9,7 @@ dirname = os.path.dirname(__file__)
 
 tf.__version__
 
-# Importing the dataset
+# Import the dataset
 dataset = pd.read_csv(dirname+'\\Churn_Modelling.csv')
 x = dataset.iloc[:, 3:-1].values    # All rows, columns from index 3 to the second last column
 y = dataset.iloc[:, -1].values      # All rows, last column
