@@ -1,0 +1,46 @@
+K-Means Clustering
+
+K-Means Clustering groups similar data points into clusters without needing labeled data.
+It is used to find hidden patterns when the goal is to organize data based on similarity.
+
+Examples:
+    - Helps identify natural groupings in unlabeled datasets
+    - Works by grouping points based on distance to cluster centers
+    - Commonly used in customer segmentation, image compression, and pattern discovery
+    - Useful when you need structure from raw, unorganized data
+
+K-Means Clustering is popular for a wide variety of applications due to its simplicity, efficiency, and effectiveness.
+
+Examples:
+    - Data Segmentation: 
+        Separating data into distinct groups
+
+    - Image Compression:
+        Reduce the complexity of images by grouping similar pixels into cluster, effectively compressing the image,
+        useful for storage and processing
+
+    - Anomaly Detection:
+        Detect anomalies or outliers by identifying data points that do not belong to any of the clusters
+
+    - Document Clustering:
+        In natural language processing (NLP), K-Means is used to group similar documents or articles together,
+        it is often used in applications like recommendation systems or news categorization
+
+    - Organizing Large Datasets:
+        K-Means can help organize data into smaller, more manageable chunks based on similarities, improving
+        the efficiency of data analysis
+
+Limitations:
+    - Choosing the right number of clusters (k)
+    Deciding how many cluster to use
+
+    - Sensitive to initial centroids:
+    The final clusters vary depending on the inital random placement of centroids
+
+    - Non-spherical clusters:
+    K-Means assumes that the clusters are spherical and equally sized. This can be a problem when the actual
+    clusters in the data are of different shapes or densities
+
+    - Outliers:
+    K-Means is sensitive to outliers, which can distort the centroid, and ultimately, entire clusters
+    
