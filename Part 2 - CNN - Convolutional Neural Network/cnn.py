@@ -1,3 +1,5 @@
+# Convolutional Neural Network (CNN)
+
 import tensorflow as tf
 import numpy as np
 from keras.layers import Rescaling, RandomFlip, RandomZoom, RandomRotation, Conv2D, MaxPooling2D, Flatten, Dense
