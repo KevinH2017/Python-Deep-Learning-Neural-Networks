@@ -1,3 +1,5 @@
+# Self-Organizing Maps (SOM)
+
 import numpy as np
 import matplotlib.pyplot as plt
 import pandas as pd
@@ -54,7 +56,7 @@ plt.show()
 
 # Finding the frauds
 mappings = som.win_map(X)
-frauds = np.concatenate((mappings[(8,1)], mappings[(6,9)]), axis = 0)
+frauds = np.concatenate((mappings[(8,1)], mappings[(6,8)]), axis = 0)
 frauds = sc.inverse_transform(frauds)
 
 print('Fraud Customer IDs:')
