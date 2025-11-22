@@ -1,45 +1,62 @@
+# Artificial Neural Network
+
 import numpy as np
 import pandas as pd
 import tensorflow as tf
+from sklearn.metrics import confusion_matrix, accuracy_score
+from sklearn.preprocessing import LabelEncoder
 from sklearn.compose import ColumnTransformer
-from sklearn.preprocessing import OneHotEncoder, LabelEncoder, StandardScaler
+from sklearn.preprocessing import OneHotEncoder
 from sklearn.model_selection import train_test_split
+from sklearn.preprocessing import StandardScaler
 import os
 dirname = os.path.dirname(__file__)
 
 tf.__version__
 
-# Import the dataset
-dataset = pd.read_csv(dirname+'\\Churn_Modelling.csv')
-x = dataset.iloc[:, 3:-1].values    # All rows, columns from index 3 to the second last column
-y = dataset.iloc[:, -1].values      # All rows, last column
-print(x)
-print(y)
+# Importing the dataset
+dataset = pd.read_csv(dirname+"\\example_datasets\\Churn_Modelling.csv")
+X = dataset.iloc[:, 3:-1].values
+y = dataset.iloc[:, -1].values
 
-# Encodes the data in the Gender column to numerical values
-# Female = 0, Male = 1
+# Encoding categorical data
 le = LabelEncoder()
-x[:, 2] = le.fit_transform(x[:, 2])
-print(x)
+X[:, 2] = le.fit_transform(X[:, 2])
 
-"""
-One Hot Encoding is used to encode the specified column to binary,
-1 means the category is present and 0 means it is not.
-This is done to improve performance, make the code more compatible with algorithms
-and to eliminate ordinality, which can mislead some algorithms to think that one 
-category is greater than another and lead to biased predictions.
-"""
 ct = ColumnTransformer(transformers=[('encoder', OneHotEncoder(), [1])], remainder='passthrough')
-x = np.array(ct.fit_transform(x))
-print(x)
+X = np.array(ct.fit_transform(X))
 
 # Splitting the dataset into the Training set and Test set
-x_train, x_test, y_train, y_test = train_test_split(x, y, test_size = 0.2, random_state = 0)
-sc = StandardScaler()
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size = 0.2, random_state = 0)
 
-# It is important to do feature scaling before training the ANN to ensure that all 
-# features contribute equally
-x_train = sc.fit_transform(x_train)
-x_test = sc.transform(x_test)
-print(x_train)
-print(x_test)
+# Feature Scaling
+sc = StandardScaler()
+X_train = sc.fit_transform(X_train)
+X_test = sc.transform(X_test)
+
+# Initializing the ANN
+ann = tf.keras.models.Sequential()
+
+# Adding the input layer and the first hidden layer
+ann.add(tf.keras.layers.Dense(units=6, activation='relu'))
+
+# Adding the second hidden layer
+ann.add(tf.keras.layers.Dense(units=6, activation='relu'))
+
+# Adding the output layer
+ann.add(tf.keras.layers.Dense(units=1, activation='sigmoid'))
+
+# Compiling the ANN
+ann.compile(optimizer = 'adam', loss = 'binary_crossentropy', metrics = ['accuracy'])
+
+# Training the ANN on the Training set
+ann.fit(X_train, y_train, batch_size = 32, epochs = 100)
+
+# Predicting the Test set results
+y_pred = ann.predict(X_test)
+y_pred = (y_pred > 0.5)
+
+# Making the Confusion Matrix
+cm = confusion_matrix(y_test, y_pred)
+print(cm)
+accuracy_score(y_test, y_pred)
