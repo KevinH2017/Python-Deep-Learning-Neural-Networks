@@ -1,0 +1,17 @@
+Energy-Based Models (EBM)
+
+EMBs are used to provide a unified framework for many probabilistic and non-probabilistic approaches to learning, such as training
+graphical and other structured models like generative artificial intelligence. EBMs are a class of generative models, which aim to
+learn explicit probability distributions of data in the form of energy-based models, the energy functions of which are parameterized
+by modern deep neural networks.
+
+EMB Properties:
+    - Simplicity and stability
+    - Adaptive computation time
+    - flexibility
+    - Adaptive generation
+    - Compositionality
+
+The model will attempt to reach the lowest possible energy state.
+
+Apps that use this model include natural language processing and computer vision.
