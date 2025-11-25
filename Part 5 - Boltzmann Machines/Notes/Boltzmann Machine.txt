@@ -1,0 +1,10 @@
+Boltzmann Machine
+
+Boltzmann Machine is a type of unsupervised network that is mainly used for recommendation systems.
+There is a combination of hidden and visible nodes that have bidirectional connections with each other, and has no output layer.
+
+Visible nodes can be measured and are measure.
+Hidden nodes cannot be measured or are not measured.
+
+It learns by taking in good examples and can model what a system's state is considered normal, then it is able to know when a system
+is in an abnormal state. An example is a model to know when a nuclear reactor is in a normal state and when it is in an abnormal and dangerous state.
