@@ -1,0 +1,11 @@
+Restricted Boltzmann Machine (RBM)
+
+RBM is a type of neural network that can learn a probability distribution over its set of inputs.
+Fine-tuning the network is done with gradient descent and backpropagation.
+RBM is a variant of Boltzmann Machines with the restriction that their neurons must form a bipartite graph.
+
+A bipartite is a graph whose vertices can be divided into two disjount and independent sets.
+    - A pair of nodes from each of the two groups of units ("visible" and "hidden" units) may have a symmetric
+    connection between them
+    - There are no connections between nodes within the group
+
