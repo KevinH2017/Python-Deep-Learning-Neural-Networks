@@ -1,0 +1,11 @@
+Deep Belief Networks (DBN)
+
+DBNs are sophisticated neural networks that are made up of several stacked RBMs, where the stacked Hidden Nodes flow 
+down to the Visible Nodes. Each layer is capable of making sense of the information received from the previous layer, 
+gradually bulding up a complex understanding of the overall data.
+
+DBNs aim to extract different features from the input data, with the lower layers identifying basic patterns and higher
+layers recognizing more abstract concepts. This allows the DBN is effectively learn complex datasets for tasks such as
+image and speech recognition.
+
+Deep Boltzmann Machines are not the same as Deep Belief networks.
