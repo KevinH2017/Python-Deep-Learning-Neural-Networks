@@ -1,0 +1,27 @@
+Autoencoders
+
+Example:
+    Visible Input Nodes --> Encoding --> Hidden Nodes --> Decoding --> Visible Output Nodes
+
+Autoencoders are a type of neural network used to learn efficient codings of unlabeled data (unsupervised learning).
+It functions by an encoding input function and a decoding output function that recreates the input data from the encoded representation.
+
+Training an AutoEncoder for Users and Movies:
+
+1.) Start with an array where the lines (observations) correspond to the users and the columns (features) correspond to the movies.
+    Each cell (u, i) contains the ratings (from 1 to 5, 0 if no rating) of the movie i by the user u.
+
+2.) The first user goes into the networ. The input vector x = (r1, r2,..., rm) contains all its ratings for all the movies.
+
+3.) The input vector is encoded into a vector z of lower dimensions by a mapping function f (ex: sigmoud function)
+        z = f(Wx +b) where W is the vector of input weights and b the bias
+
+4.) z is then decoded into the output vector y of same dimensions as x, aiming to replicate the input vector x.
+
+5.) The reconstruction error d(x, y) = ||x - y|| is computed. The goal is to minimize it.
+
+6.) Back-Propagation: from right-to-left, the error is back-propagated. The weights are updated according to how much they are responsible
+    for the error. The learning rate decides by how much we update the weights.
+
+7.) Repeat steps 1 to 6 and update the weights after each observation (Reinforcement Learning). Or:
+    Repeat steps 1 to 6 but update the weights only after a batch of observations (Batch Learning).
