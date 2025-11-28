@@ -23,8 +23,8 @@ nb_movies = int(max(max(training_set[:, 1]), max(test_set[:, 1])))              
 # Converts the data into an array with users in lines and movies in columns
 def convert(data):
     '''
-    Takes multiple arrays of data (users and movies) and combines them into one array.
-    Users in rows and movies in columns.
+    Takes multiple arrays of data (users, movies, ratings) and combines them into one array.
+    Users in rows, movies in columns, and ratings in cells.
     Returns list.
     '''
     new_data = []
