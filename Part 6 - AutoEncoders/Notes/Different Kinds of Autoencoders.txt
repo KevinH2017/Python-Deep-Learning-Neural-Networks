@@ -1,0 +1,28 @@
+Different Kinds of Autoencoders
+
+Overcomplete Hidden Layers:
+    Are when you have more hidden nodes than input and output nodes, however this by itself can cause overfitting.
+
+Spare Autoencoders:
+    Are when you have more hidden nodes but helps avoid overfitting by restricting some hidden nodes, forcing the auto AutoEncoder
+    to only use a certain number of nodes.
+
+Denoising Autoencoders:
+    Help to avoid Autoencoders from just replicating input perfectly, failing to extract meaningful features.
+    It does this by providing a deliberately noisy or corrupted version of the input to the encoder, but still using the original,
+    clean input for calculating loss.
+    EX:
+        Half of all input nodes become 0
+
+Contractive Autoencoders:
+    These are made to make autoencoders robust to small changes in the training dataset. In order to deal with those challenges,
+    it adds a penalty to the loss function during training, forcing the model to learn a representation that is robust against
+    small changes or noise in the input.
+
+Stacked Autoencoders:
+    When autoencoders have an additional hidden layer before the decoding portion of the model.
+    EX:
+        Input Layer --> Encoding --> Hidden Layer 1 --> Encoding --> Hidden Layer 2 --> Decoding --> Output layer
+
+Deep AutoEncoders:
+    Stacked autoencoders are not the same as deep autoencoders. Deep autoencoders are stacked RBMs that have back-propagation.
