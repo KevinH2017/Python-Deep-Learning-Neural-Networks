@@ -138,6 +138,7 @@ for epoch in range(1, nb_epoch + 1):
 # Testing the RBM
 test_loss = 0
 s = 0.
+print("Testing the RBM...")
 # Iterates through each batch
 for id_user in range(nb_users):
     v = training_set[id_user:id_user+1]
