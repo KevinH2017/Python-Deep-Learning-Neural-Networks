@@ -17,7 +17,7 @@ X = dataset.iloc[:, :-1].values
 Y = dataset.iloc[:, -1].values
 
 # Transform data into a given range to be used in the formula for normalization or standardization
-sc = MinMaxScaler(feature_range=(0,1))
+sc = MinMaxScaler(feature_range=(0, 1))
 X = sc.fit_transform(X)
 
 '''
@@ -45,8 +45,8 @@ colors = ['r', 'g']
 for i, x in enumerate(X):
     w = som.winner(x)
     plt.plot(
-        w[0]+0.5, 
-        w[1]+0.5, 
+        w[0] + 0.5, 
+        w[1] + 0.5, 
         markers[Y[i]],
         markeredgecolor=colors[Y[i]],
         markerfacecolor='None',
@@ -56,7 +56,7 @@ plt.show()
 
 # Finding the frauds
 mappings = som.win_map(X)
-frauds = np.concatenate((mappings[(8,1)], mappings[(6,8)]), axis = 0)
+frauds = np.concatenate((mappings[(8, 1)], mappings[(6, 8)]), axis=0)
 frauds = sc.inverse_transform(frauds)
 
 print('Fraud Customer IDs:')
