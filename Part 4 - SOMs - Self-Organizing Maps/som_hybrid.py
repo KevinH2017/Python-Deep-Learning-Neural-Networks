@@ -1,4 +1,4 @@
-# SOM Hybrid
+# Self-Organizing Maps Hybrid
 
 import numpy as np
 import matplotlib.pyplot as plt
@@ -21,7 +21,7 @@ X = dataset.iloc[:, :-1].values
 Y = dataset.iloc[:, -1].values
 
 # Transform data into a given range to be used in the formula for normalization or standardization
-sc = MinMaxScaler(feature_range=(0,1))
+sc = MinMaxScaler(feature_range=(0, 1))
 X = sc.fit_transform(X)
 
 # Training the SOM:
@@ -39,8 +39,8 @@ colors = ['r', 'g']
 for i, x in enumerate(X):
     w = som.winner(x)
     plt.plot(
-        w[0]+0.5, 
-        w[1]+0.5, 
+        w[0] + 0.5, 
+        w[1] + 0.5, 
         markers[Y[i]],
         markeredgecolor=colors[Y[i]],
         markerfacecolor='None',
@@ -52,8 +52,7 @@ plt.show()
 mappings = som.win_map(X)
 
 # Creates non-empty arrays from mappings to prevent ValueError
-# results = [arr for arr in (mappings[(8,1)], mappings[(6,8)]) if arr]
-frauds = np.concatenate([arr for arr in (mappings[(8,1)], mappings[(6,8)]) if len(arr) > 0], axis=0)
+frauds = np.concatenate([arr for arr in (mappings[(8, 1)], mappings[(6, 8)]) if len(arr) > 0], axis=0)
 frauds = sc.inverse_transform(frauds)
 
 
@@ -65,7 +64,7 @@ customers = dataset.iloc[:, 1:].values
 # Creating dependent variables
 is_fraud = np.zeros(len(dataset))
 for i in range(len(dataset)):
-    if dataset.iloc[i,0] in frauds:
+    if dataset.iloc[i, 0] in frauds:
         is_fraud[i] = 1
 
 # Feature Scaling
