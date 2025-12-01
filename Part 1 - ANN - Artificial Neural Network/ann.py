@@ -47,10 +47,10 @@ ann.add(tf.keras.layers.Dense(units=6, activation='relu'))
 ann.add(tf.keras.layers.Dense(units=1, activation='sigmoid'))
 
 # Compiling the ANN
-ann.compile(optimizer = 'adam', loss = 'binary_crossentropy', metrics = ['accuracy'])
+ann.compile(optimizer='adam', loss='binary_crossentropy', metrics=['accuracy'])
 
 # Training the ANN on the Training set
-ann.fit(X_train, y_train, batch_size = 32, epochs = 100)
+ann.fit(X_train, y_train, batch_size=32, epochs=100)
 
 # Predicting the Test set results
 y_pred = ann.predict(X_test)
