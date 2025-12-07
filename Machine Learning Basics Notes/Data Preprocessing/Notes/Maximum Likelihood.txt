@@ -1,0 +1,6 @@
+Maximum Likelihood
+
+The maximum likelihood is a method of estimating the parameters of a statistical model.
+It does this by measuring how well a particular set of parameters explains the observed data.
+The higher the value of the likelihood function, the better those parameters explain the data.
+It "scores" the different paraters so that it can pick the ones that best fit the data.
