@@ -1,0 +1,10 @@
+Multiple Linear Regression
+
+Multiple linear regression is the same as simple linear regression but with two or more independent variables.
+This is used to help understand how multiple features collectively affect the outcomes.
+
+Formula:
+    y = b0 + b1 * X1 + b2 * X2 + ... +bn * Xn
+
+    y is the Dependent Variable (DV)
+    bn * Xn is the Independen Variable (IV)
