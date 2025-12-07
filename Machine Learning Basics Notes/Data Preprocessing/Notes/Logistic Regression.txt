@@ -1,0 +1,12 @@
+Logistic Regression
+
+Logistic regression is a method to predict a categorical dependent variable form a number
+of independent variables.
+This uses the sigmoid function to map the predicted values.
+
+Example:
+    Predicting if a person will purchase health insurance (Yes/No) based on their age.
+    0 = No, 1 = Yes
+    X = age
+    Y = Do they purchase health insurance? (0 or 1)
+
