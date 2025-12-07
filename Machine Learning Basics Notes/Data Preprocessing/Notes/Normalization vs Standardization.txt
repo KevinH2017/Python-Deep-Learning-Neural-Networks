@@ -1,0 +1,45 @@
+Normalization vs Standardization
+
+The Machine Learning Process
+
+All machine learning processes require data-preprocessing in order to build an effective model.
+
+Data Pre-Processing: 
+    - Import the data 
+    - Clean the data 
+    - Split into training and test sets
+
+Modelling:
+    - Build the model
+    - Train the model
+    - Make predictions
+
+Evaluation:
+    - Calculate performance metrics
+    - Make a verdict
+
+
+Training & Test Set
+
+Training sets are used to build the model and with that model, apply the test set to get a predicted value vs the actual value
+and see how accurate it is.
+
+
+Feature Scaling
+
+Feature scaling only applies to columns.
+
+Normalization is taking the minimum of the column and subtracting that minimum from every value inside the column and dividing the value by
+the maximum minus the minimum value of the column.
+
+Forumula:
+    x = (X - Xmin) / (Xmax - Xmin)
+    Resuting lin values between 0 and 1. [0;1]
+
+Standardization is subtracting the minimum by the average of the column and dividing that by the standard deviation of the column.
+
+Formula:
+    x = (X - mean(X)) / std(X)
+    Resulting in values with an average of 0 and a standard deviation of 1
+
+These methods are helpful to make sure all columns are on the same scale, so that no column has more weight than another column.
