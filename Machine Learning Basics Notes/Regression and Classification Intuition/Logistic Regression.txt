@@ -1,0 +1,29 @@
+Logistic Regression
+
+Logistic regression is a supervised machine learning algorithm used for classification problems.
+Unlike linear regression, which predicts continuous values, logistic regression predicts the probability
+that an input belongs to a specific class.
+
+It is used for binary classification where the output can be one of two possible categories such as Yes / No,
+True / False, or 0 / 1.
+It uses sigmoid function to convert inputs into a probability value between 0 and 1.
+
+Types of Logistc Regression:
+
+Binomial Logistic Regression
+    - This type is used when the dependent variable has only two possible categories.
+    It is the most common form of logistic regression and is used for binary classification problems.
+    Example:
+        Yes / No, True / False, 0 / 1
+
+Multinomial Logistic Regression
+    - This is used when the dependent variable has three or more possible categories that are not ordered.
+    It extends the binary logistic regression to handle multiple classes.
+    Example:
+        Animal categories like "cat", "dog", or "sheep"
+
+Ordinal Logistic Regression
+    - This type applies when the dependent variable has three or more categories with a natural order of ranking.
+    It takes the order of the categories into account when modeling.
+    Example:
+        Ratings like "low", "medium" and "high"
