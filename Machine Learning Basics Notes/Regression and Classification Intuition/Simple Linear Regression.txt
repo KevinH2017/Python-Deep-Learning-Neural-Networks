@@ -1,0 +1,34 @@
+Simple Linear Regression
+
+Simple linear regression is a model with a single explanatory variable. In other words, it is two-dimensional sample points with
+one independent variable and one dependent variable and tries to find a linear function that accurately predicts the dependent
+variable values as a function of the independent variable.
+
+The accuracy is measured by its squared residual (vertical distance between the point of the data set and the fitted line),
+with the goal to make the sum of these squared deviations as small as possible. With the slope of the fitted line is equal
+to the correlation between x and y corrected by the ratio of standard deviations of these variables.
+
+To find the best fitting line, you find the distance from the observations to the trend line.
+
+The goal is to minimize the sum by finding the difference between the targeted and predicted values, then squaring them.
+    Formula:
+        SUM(y0 - y1)^2 -> min
+
+Summary:
+
+The aim is to describe how one variable (dependent variable) changes in relation with reference to the independent variable.
+Such as using available information to make predictions of future results with a trend line.
+
+Example:
+    A company wants to predict sales based on advertising costs. By using simple linear regregression, they are
+    able to determine if an increase in advertising can lead to higher sales or not.
+
+    Predicting how much a person's salary will increase over time with their experience with a trend line.
+
+Formula:
+    y = b0 + b1 * X1
+
+        y is the Dependent Variable (DV)
+        b0 is the Constant
+        b1 is the Coefficient
+        x1 is the Independent Variable (IV)
