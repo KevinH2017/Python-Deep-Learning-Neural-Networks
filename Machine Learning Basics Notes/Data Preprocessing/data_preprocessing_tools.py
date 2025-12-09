@@ -39,10 +39,12 @@ Y = le.fit_transform(Y)
 # Splitting the dataset into random training and test sets
 X_train, X_test, Y_train, Y_test = train_test_split(X, Y, test_size=0.2, random_state=1)
 
-# Feature Scaling
+# Feature Scaling, transforming variables to a common scale
 sc = StandardScaler()
 X_train[:, 3:] = sc.fit_transform(X_train[:, 3:])
 X_test[:, 3:] = sc.transform(X_test[:, 3:])
 
 print(X_train)
 print(X_test)
+print(Y_train)
+print(Y_test)
